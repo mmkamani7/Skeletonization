@@ -48,7 +48,7 @@ Then you would use our fuzzy inference system to prune the skeleton like this:
 skeletonNew = fuzzyTransform(initialSkeleton, vertices, edgeList, edgeProperties, verticesProperties, verticesProperties2, adjacencyMatrix)
 ```
 
-## Paper Citation
+## References 
 ```ref
 @article{kamani2017skeleton,
   title={Skeleton Matching with Applications in Severe Weather Detection},
