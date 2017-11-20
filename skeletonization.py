@@ -50,13 +50,12 @@ class skeleton:
             adjacencyMatrix, edgeList, edgeProperties, edgeProperties2, verticesProperties, verticesProperties2, endPoints, branchPoints = skeleton2Graph(
                 fluxTemp, fluxTemp * fluxMap)
             vertices = np.concatenate((endPoints, branchPoints))
-            skeletonTemp, _ = fuzzyTransform(fluxTemp, vertices, edgeList, edgeProperties, verticesProperties,
-                                             verticesProperties2, adjacencyMatrix)
+            skeletonTemp = fuzzyTransform(fluxTemp, vertices, edgeList, edgeProperties, verticesProperties, verticesProperties2, adjacencyMatrix)
             adjacencyMatrix, edgeList, edgeProperties, edgeProperties2, verticesProperties, verticesProperties2, endPoints, branchPoints = skeleton2Graph(
                 skeletonTemp, skeletonTemp * fluxMap)
             if len(edgeList) > 1:
                 vertices = np.concatenate((endPoints, branchPoints))
-                skeletonTemp, _ = fuzzyTransform(skeletonTemp, vertices, edgeList, edgeProperties, verticesProperties,
+                skeletonTemp = fuzzyTransform(skeletonTemp, vertices, edgeList, edgeProperties, verticesProperties,
                                                  verticesProperties2, adjacencyMatrix)
             skeletonNew += skeletonTemp
         self.skeleton = skeletonNew
