@@ -326,7 +326,7 @@ def skeleton2Graph(skeleton, fluxMap, sigma = 5):
         edgeLinkedNumber = adjacencyMatrix[v, np.where(adjacencyMatrix[v, :] != 0)[0]]
         if (~ edgeLinkedNumber.any()):
             continue
-        edgeLinkedLength = np.array(edgeLength)[map(int, list(np.abs(edgeLinkedNumber) - 1))].tolist()
+        edgeLinkedLength = np.array(edgeLength)[list(map(int, list(np.abs(edgeLinkedNumber) - 1)))].tolist()
         searchDepth = min(edgeLinkedLength)
         for el in edgeLinkedNumber:
             if el > 0:
