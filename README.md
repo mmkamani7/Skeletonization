@@ -7,7 +7,7 @@ In this repository you can see the code for skeletonization of binary images usi
 Skeleton of a shape is a low-level representation that can be used for matching and recognition purposes in various fields of study including image retrieval and shape matching or human pose estimation and recovery. Skeleton can provide a good abstraction of a shape, which contains topological structure and its features. Because it is the simplest representation of a shape, there has been an extensive effort among researchers to develop generic algorithms for skeletonization of shapes. However, since there is no “true” skeleton defined for an object, the literature in skeletonization lack of a robust evaluation. The vast majority of the algorithms are based on Blum’s “Grassfire” analogy and formulation for skeletonization. The most important key factor in skeletonization algorithms is to preserve the topology of the shape. 
 
 
-## Sofrware Requirements
+## Software Requirements
 This code has been developed and tested on Python2.7 on Windows, Ubuntu and MacOS, however, it shoud work fine on Python3.x. Please let us know if you have difficulty on running this code on Issues page. The code in Python needs some packages, you can get them by this line of code in bash or cmd (you might need sudo on Linux):
 
 ```bash
